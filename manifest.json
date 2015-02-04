@@ -1,0 +1,22 @@
+{
+  "name" : "Hypem, Home Automation",
+  "version" : "1.0.1",
+  "description" : "Hypem, Home Automation",
+  "permissions" : ["tabs", "webRequest", "http://*/*", "https://*/*", "http://feber.se/*",  "https://www.youtube.com/*", "https://youtube.com/*", "*://*.youtube.com/*", "http://127.0.0.1/*", "http://stackoverflow.com/*"],
+  "background": {
+    "scripts": [ "misc/assert.js", "background/clientSocket.js", "background/playerManager.js", "background/hypemPlayer.js", "background/controlUnitCommunicator.js", "background/tabManager.js" ]
+  },
+  "browser_action" : {
+    "default_icon" : "images/sample-128.png"
+  },
+  "icons" : {
+    "128" : "images/sample-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "http://feber.se/*",  "https://www.youtube.com/*","https://youtube.com/*", "http://127.0.0.1/*", "http://stackoverflow.com/*"],
+      "js" : ["misc/jquery-2.0.1.min.js", "tabs/domObserver/childChangedObserver.js", "tabs/domObserver/attributeChangedObserver.js", "tabs/domObserver/styleChangedObserver.js", "tabs/domObserver/classChangedObserver.js", "misc/assert.js", "tabs/main.js", "tabs/playerHandler.js", "tabs/backgroundCommunicator.js", "misc/helpFunctions.js" ]
+    }
+  ],
+  "manifest_version": 2
+}

@@ -1,0 +1,4 @@
+﻿
+--- Hypem ---
+playTrack()
+pauseTrack()
