@@ -1,4 +1,2 @@
-﻿
---- Hypem ---
-playTrack()
-pauseTrack()
+﻿- Fix so we can set the volume of the Hypem player
+- Fix so we can set the current time (seek position) of the Hypem player
