@@ -26,6 +26,7 @@ PlayerManager = (function(){
 
 	//Removes a Hypem player from the collection
 	function removePlayer(playerId){
+		console.log('removePlayer - ' + playerId);
 		delete mPlayers[playerId];
 		castEvent('playerRemoved', { playerId: playerId });
 	}
